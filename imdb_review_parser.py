@@ -26,7 +26,7 @@ except Exception, e:
 def main():
 	for i in range(0,4000, 10):
 		try:
-			source_code = opener.open( matrix_url.format(i)).read()
+			source_code = opener.open( citizen_kane_url.format(i)).read()
 			split_source = re.findall(r'<hr size="1" noshade="1">(.*?)<hr size="1" noshade="1">', 
 			source_code, re.DOTALL)[0]
 			find_scores = re.findall(r'<img width="102" height="12" alt(.*?)Was the above review useful to you', 
@@ -50,6 +50,6 @@ def main():
 			print str(e)
 			print "Error in main try."
 			time.sleep(1)
-		time.sleep(1)
+		time.sleep(3)
 		
 main()
